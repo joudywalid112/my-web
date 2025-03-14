@@ -1,37 +1,60 @@
-import cv2
-import mediapipe as mp
-
-# تحميل نموذج كشف الوجه والمعالم
-mp_face_mesh = mp.solutions.face_mesh
-face_mesh = mp_face_mesh.FaceMesh()
-
-# تشغيل الكاميرا
-cap = cv2.VideoCapture(0)
-
-while cap.isOpened():
-    ret, frame = cap.read()
-    if not ret:
-        break
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eye Tracking Camera</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+        video {
+            border: 2px solid #333;
+            border-radius: 10px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Eye Tracking System</h1>
+    <video id="video" width="640" height="480" autoplay></video>
+    <button id="capture">Capture Frame</button>
     
-    # تحويل الصورة إلى RGB لأن Mediapipe يستخدم RGB
-    rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-    
-    # استخراج معالم الوجه
-    results = face_mesh.process(rgb_frame)
-    
-    if results.multi_face_landmarks:
-        for face_landmarks in results.multi_face_landmarks:
-            for idx, landmark in enumerate(face_landmarks.landmark):
-                h, w, c = frame.shape
-                x, y = int(landmark.x * w), int(landmark.y * h)
-                
-                # رسم النقاط على العين فقط (نقاط محددة للعين)
-                if idx in [33, 133, 160, 144, 145, 153, 362, 263, 387, 373, 374, 380]:
-                    cv2.circle(frame, (x, y), 2, (0, 255, 0), -1)
-    
-    cv2.imshow('Eye Tracking', frame)
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
+    <script>
+        // Access the camera
+        const video = document.getElementById('video');
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(stream => {
+                video.srcObject = stream;
+            })
+            .catch(err => {
+                console.error("Error accessing camera: ", err);
+            });
 
-cap.release()
-cv2.destroyAllWindows()
+        document.getElementById('capture').addEventListener('click', () => {
+            const canvas = document.createElement('canvas');
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+            const imageData = canvas.toDataURL('image/png');
+            console.log("Captured Frame: ", imageData);
+            // هنا ممكن تبعتي الصورة لسيرفر فيه ذكاء اصطناعي لتحليل حركة العين
+        });
+    </script>
+</body>
+</html>
