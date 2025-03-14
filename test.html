@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autism Test</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Autism Screening Test</h1>
+        <form id="autismTest">
+            <label>1. Does your child respond to their name?</label>
+            <select name="q1">
+                <option value="1">Never</option>
+                <option value="2">Rarely</option>
+                <option value="3">Sometimes</option>
+                <option value="4">Often</option>
+                <option value="5">Always</option>
+            </select>
+
+            <label>2. Does your child maintain eye contact?</label>
+            <select name="q2">
+                <option value="1">Never</option>
+                <option value="2">Rarely</option>
+                <option value="3">Sometimes</option>
+                <option value="4">Often</option>
+                <option value="5">Always</option>
+            </select>
+
+            <label>3. Does your child engage in repetitive movements?</label>
+            <select name="q3">
+                <option value="5">Always</option>
+                <option value="4">Often</option>
+                <option value="3">Sometimes</option>
+                <option value="2">Rarely</option>
+                <option value="1">Never</option>
+            </select>
+
+            <button type="button" onclick="calculateResult()">Submit</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
