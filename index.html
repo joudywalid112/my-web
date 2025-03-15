@@ -1,208 +1,79 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Autism Assessment Form</title>
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(to right, #6a11cb, #2575fc);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+import { motion } from "framer-motion";
+import { useState } from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
-        .container {
-            background: white;
-            max-width: 650px;
-            width: 90%;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            animation: fadeIn 1s ease-in-out;
-        }
-
-        h1 {
-            color: #2575fc;
-            margin-bottom: 15px;
-            font-size: 24px;
-        }
-
-        .question {
-            text-align: left;
-            margin: 15px 0;
-            padding: 15px;
-            background: #f7f7f7;
-            border-radius: 8px;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .question:hover {
-            transform: scale(1.03);
-            background: #eef;
-        }
-
-        label {
-            font-weight: bold;
-            color: #333;
-            font-size: 16px;
-        }
-
-        .options {
-            margin-top: 8px;
-        }
-
-        input[type="radio"] {
-            margin: 0 10px;
-            transform: scale(1.2);
-        }
-
-        button {
-            background: linear-gradient(to right, #6a11cb, #2575fc);
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            font-size: 18px;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
-            margin-top: 15px;
-        }
-
-        button:hover {
-            background: linear-gradient(to right, #2575fc, #6a11cb);
-            transform: scale(1.05);
-        }
-
-        #result {
-            margin-top: 20px;
-            font-size: 18px;
-            font-weight: bold;
-            color: #444;
-            padding: 15px;
-            background: #eef;
-            border-radius: 10px;
-            display: none;
-        }
-
-        /* Animation */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <h1>Autism Assessment Form</h1>
-        <form id="autismForm">
-            <div class="question">
-                <label>1. Does your child avoid eye contact?</label><br>
-                <div class="options">
-                    <input type="radio" name="q1" value="Always"> Always
-                    <input type="radio" name="q1" value="Sometimes"> Sometimes
-                    <input type="radio" name="q1" value="Never"> Never
-                </div>
-            </div>
-
-            <div class="question">
-                <label>2. Does your child respond to their name?</label><br>
-                <div class="options">
-                    <input type="radio" name="q2" value="Always"> Always
-                    <input type="radio" name="q2" value="Sometimes"> Sometimes
-                    <input type="radio" name="q2" value="Never"> Never
-                </div>
-            </div>
-
-            <div class="question">
-                <label>3. Does your child engage in repetitive behaviors (e.g., hand flapping, rocking)?</label><br>
-                <div class="options">
-                    <input type="radio" name="q3" value="Always"> Always
-                    <input type="radio" name="q3" value="Sometimes"> Sometimes
-                    <input type="radio" name="q3" value="Never"> Never
-                </div>
-            </div>
-
-            <div class="question">
-                <label>4. Does your child have difficulty understanding emotions?</label><br>
-                <div class="options">
-                    <input type="radio" name="q4" value="Always"> Always
-                    <input type="radio" name="q4" value="Sometimes"> Sometimes
-                    <input type="radio" name="q4" value="Never"> Never
-                </div>
-            </div>
-
-            <div class="question">
-                <label>5. Does your child prefer playing alone rather than with others?</label><br>
-                <div class="options">
-                    <input type="radio" name="q5" value="Always"> Always
-                    <input type="radio" name="q5" value="Sometimes"> Sometimes
-                    <input type="radio" name="q5" value="Never"> Never
-                </div>
-            </div>
-
-            <div class="question">
-                <label>6. Does your child have unusual sensitivity to lights, sounds, or textures?</label><br>
-                <div class="options">
-                    <input type="radio" name="q6" value="Always"> Always
-                    <input type="radio" name="q6" value="Sometimes"> Sometimes
-                    <input type="radio" name="q6" value="Never"> Never
-                </div>
-            </div>
-
-            <button type="button" onclick="calculateScore()">Submit</button>
-        </form>
-
-        <div id="result"></div>
+function HomePage() {
+  return (
+    <div className="h-screen flex flex-col items-center justify-center bg-gradient-to-r from-blue-500 to-purple-500 text-white">
+      <motion.h1
+        className="text-4xl font-bold mb-6"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        مرحبًا بك في موقعنا!
+      </motion.h1>
+      <motion.p
+        className="text-lg mb-4"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5 }}
+      >
+        منصة تساعد الأمهات في تسجيل بيانات أبنائهن بسهولة
+      </motion.p>
+      <motion.button
+        className="bg-white text-blue-500 px-6 py-3 rounded-xl font-semibold shadow-lg hover:scale-105 transition"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+      >
+        <Link to="/form">ابدأ الآن</Link>
+      </motion.button>
     </div>
+  );
+}
 
-    <script>
-        function calculateScore() {
-            let score = 0;
-            let questions = document.querySelectorAll('input[type="radio"]:checked');
+function FormPage() {
+  const [formData, setFormData] = useState({ name: "", age: "", school: "" });
 
-            if (questions.length < 6) {
-                alert("Please answer all the questions.");
-                return;
-            }
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
-            questions.forEach(q => {
-                if (q.value === "Always") {
-                    score += 2;
-                } else if (q.value === "Sometimes") {
-                    score += 1;
-                }
-            });
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("تم إرسال البيانات بنجاح!");
+  };
 
-            let resultMessage = "";
-            if (score >= 10) {
-                resultMessage = "⚠️ High likelihood of autism. Please consult a specialist.";
-            } else if (score >= 5) {
-                resultMessage = "🔍 Moderate likelihood. Consider further evaluation.";
-            } else {
-                resultMessage = "✅ Low likelihood of autism.";
-            }
+  return (
+    <div className="h-screen flex items-center justify-center bg-gray-100">
+      <div className="bg-white p-8 rounded-xl shadow-lg max-w-md w-full">
+        <h2 className="text-2xl font-bold text-center mb-4">تسجيل بيانات الطفل</h2>
+        <form onSubmit={handleSubmit}>
+          <label className="block mb-2">الاسم:</label>
+          <input type="text" name="name" className="w-full p-2 mb-4 border rounded" onChange={handleChange} required />
+          
+          <label className="block mb-2">العمر:</label>
+          <input type="number" name="age" className="w-full p-2 mb-4 border rounded" onChange={handleChange} required />
+          
+          <label className="block mb-2">المدرسة:</label>
+          <input type="text" name="school" className="w-full p-2 mb-4 border rounded" onChange={handleChange} required />
+          
+          <button type="submit" className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600">إرسال</button>
+        </form>
+      </div>
+    </div>
+  );
+}
 
-            let resultDiv = document.getElementById("result");
-            resultDiv.innerHTML = resultMessage;
-            resultDiv.style.display = "block";
-        }
-    </script>
+export default function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/form" element={<FormPage />} />
+      </Routes>
+    </Router>
+  );
+}
 
-</body>
-</html>
 
