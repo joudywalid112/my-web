@@ -3,183 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ - Autism Support Guide</title>
+    <title>Autism Assessment Form</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            max-width: 650px;
+            width: 90%;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+            color: #2575fc;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        .question {
+            text-align: left;
+            margin: 15px 0;
+            padding: 15px;
+            background: #f7f7f7;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .question:hover {
+            transform: scale(1.03);
+            background: #eef;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .options {
+            margin-top: 8px;
+        }
+
+        input[type="radio"] {
+            margin: 0 10px;
+            transform: scale(1.2);
+        }
+
+        button {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background: linear-gradient(to right, #2575fc, #6a11cb);
+            transform: scale(1.05);
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #444;
+            padding: 15px;
+            background: #eef;
+            border-radius: 10px;
+            display: none;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
 </head>
-<body style="font-family: Arial, sans-serif; background-color: #ffffff; color: #000; margin: 20px;">
-    <header style="text-align: center; margin-bottom: 30px;">
-        <h1 style="color: #4682B4;">Top Most Common Questions About Autism</h1>
-    </header>
-    <section style="max-width: 800px; margin: 0 auto;">
-        <div style="margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #ddd;">
-            <h2 style="color: #00008B; font-style: italic;">What is autism?</h2>
-            <p>Autism, or Autism Spectrum Disorder (ASD), is a neurodevelopmental condition that affects a person's ability to communicate, interact socially, and behave in typical ways. It is called a "spectrum" because it varies widely in severity and symptoms among individuals.</p>
-        </div>
-        <div style="margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #ddd;">
-            <h2 style="color: #00008B; font-style: italic;">What causes autism?</h2>
-            <p>The exact cause of autism is unknown. However, research suggests it results from a combination of genetic and environmental factors. Certain genetic mutations and prenatal influences, such as exposure to toxins or infections, may contribute to its development.</p>
-        </div>
-        <div style="margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #ddd;">
-            <h2 style="color: #00008B; font-style: italic;">Is autism a mental illness?</h2>
-            <p>No, autism is not a mental illness. It is a neurological condition that affects brain development and processing. However, some individuals with autism may also experience mental health challenges such as anxiety or depression.</p>
-        </div>
-        <div style="margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #ddd;">
-            <h2 style="color: #00008B; font-style: italic;">Is there a cure for autism?</h2>
-            <p>There is no cure for autism, but various therapies and interventions can help individuals develop skills and improve their quality of life. Early intervention, behavioral therapy, speech therapy, and occupational therapy are commonly used to support autistic individuals.</p>
-        </div>
-        <div style="margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #ddd;">
-            <h2 style="color: #00008B; font-style: italic;">How is autism diagnosed?</h2>
-            <p>Autism is diagnosed through behavioral observations and developmental assessments. Doctors and specialists use tools like the Autism Diagnostic Observation Schedule (ADOS) and Autism Diagnostic Interview-Revised (ADI-R) to evaluate social, communication, and behavioral patterns.</p>
-        </div>
-        <div style="margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #ddd;">
-            <h2 style="color: #00008B; font-style: italic;">What are the common symptoms of autism in children?</h2>
-            <p>Symptoms vary, but common signs include:</p>
-            <h1 style="color: blue; font-size: 30px;">Top Most Common Questions About Autism</h1>
+<body>
 
-<h2 style="color: red;">What is autism?</h2>
-<p style="color: black;">Autism, or Autism Spectrum Disorder (ASD), is a neurodevelopmental condition that affects a person's ability to communicate, interact socially, and behave in typical ways.</p>
+    <div class="container">
+        <h1>Autism Assessment Form</h1>
+        <form id="autismForm">
+            <div class="question">
+                <label>1. Does your child avoid eye contact?</label><br>
+                <div class="options">
+                    <input type="radio" name="q1" value="Always"> Always
+                    <input type="radio" name="q1" value="Sometimes"> Sometimes
+                    <input type="radio" name="q1" value="Never"> Never
+                </div>
+            </div>
 
-<h2 style="color: red;">What causes autism?</h2>
-<p style="color: black;">The exact cause of autism is unknown. However, research suggests it results from a combination of genetic and environmental factors.</p>
+            <div class="question">
+                <label>2. Does your child respond to their name?</label><br>
+                <div class="options">
+                    <input type="radio" name="q2" value="Always"> Always
+                    <input type="radio" name="q2" value="Sometimes"> Sometimes
+                    <input type="radio" name="q2" value="Never"> Never
+                </div>
+            </div>
 
-<h2 style="color: red;">Is autism a mental illness?</h2>
-<p style="color: black;">No, autism is not a mental illness. It is a neurological condition that affects brain development and processing.</p>
+            <div class="question">
+                <label>3. Does your child engage in repetitive behaviors (e.g., hand flapping, rocking)?</label><br>
+                <div class="options">
+                    <input type="radio" name="q3" value="Always"> Always
+                    <input type="radio" name="q3" value="Sometimes"> Sometimes
+                    <input type="radio" name="q3" value="Never"> Never
+                </div>
+            </div>
 
-<h2 style="color: red;">Is there a cure for autism?</h2>
-<p style="color: black;">There is no cure for autism, but various therapies and interventions can help individuals develop skills and improve their quality of life.</p>
+            <div class="question">
+                <label>4. Does your child have difficulty understanding emotions?</label><br>
+                <div class="options">
+                    <input type="radio" name="q4" value="Always"> Always
+                    <input type="radio" name="q4" value="Sometimes"> Sometimes
+                    <input type="radio" name="q4" value="Never"> Never
+                </div>
+            </div>
 
-<h2 style="color: red;">How is autism diagnosed?</h2>
-<p style="color: black;">Autism is diagnosed through behavioral observations and developmental assessments.</p>
+            <div class="question">
+                <label>5. Does your child prefer playing alone rather than with others?</label><br>
+                <div class="options">
+                    <input type="radio" name="q5" value="Always"> Always
+                    <input type="radio" name="q5" value="Sometimes"> Sometimes
+                    <input type="radio" name="q5" value="Never"> Never
+                </div>
+            </div>
 
-<h2 style="color: red;">What are the common symptoms of autism in children?</h2>
-<p style="color: black;">Symptoms vary, but common signs include: Difficulty with eye contact and social interactions. Delayed speech or difficulty understanding non-verbal cues.</p>
+            <div class="question">
+                <label>6. Does your child have unusual sensitivity to lights, sounds, or textures?</label><br>
+                <div class="options">
+                    <input type="radio" name="q6" value="Always"> Always
+                    <input type="radio" name="q6" value="Sometimes"> Sometimes
+                    <input type="radio" name="q6" value="Never"> Never
+                </div>
+            </div>
 
-<h2 style="color: red;">Does autism affect intelligence?</h2>
-<p style="color: black;">Intelligence levels vary widely among autistic individuals. Some have average or above-average intelligence, while others may have intellectual disabilities.</p>
+            <button type="button" onclick="calculateScore()">Submit</button>
+        </form>
 
-<h2 style="color: red;">Can people with autism live independently?</h2>
-<p style="color: black;">Yes, many autistic individuals can live independently, especially with the right support and life skills training.</p>
+        <div id="result"></div>
+    </div>
 
-<h2 style="color: red;">Do vaccines cause autism?</h2>
-<p style="color: black;">No, vaccines do not cause autism. This myth originated from a discredited study in 1998 that has since been debunked.</p>
+    <script>
+        function calculateScore() {
+            let score = 0;
+            let questions = document.querySelectorAll('input[type="radio"]:checked');
 
-<h2 style="color: red;">What is the difference between autism and Asperger’s syndrome?</h2>
-<p style="color: black;">Asperger’s syndrome, previously considered a separate diagnosis, is now classified under the autism spectrum.</p>
+            if (questions.length < 6) {
+                alert("Please answer all the questions.");
+                return;
+            }
 
-<h2 style="color: red;">How does autism affect language and communication?</h2>
-<p style="color: black;">Some autistic individuals are non-verbal or have delayed speech development. Others may speak fluently but struggle with understanding sarcasm, jokes, or non-verbal cues.</p>
+            questions.forEach(q => {
+                if (q.value === "Always") {
+                    score += 2;
+                } else if (q.value === "Sometimes") {
+                    score += 1;
+                }
+            });
 
-<h2 style="color: red;">How important is early intervention for autism?</h2>
-<p style="color: black;">Early intervention significantly improves outcomes for autistic children. Therapies targeting speech, social skills, and behavior help them develop essential skills at a young age.</p>
+            let resultMessage = "";
+            if (score >= 10) {
+                resultMessage = "⚠️ High likelihood of autism. Please consult a specialist.";
+            } else if (score >= 5) {
+                resultMessage = "🔍 Moderate likelihood. Consider further evaluation.";
+            } else {
+                resultMessage = "✅ Low likelihood of autism.";
+            }
 
-<h2 style="color: red;">Can autism be prevented?</h2>
-<p style="color: black;">There is no known way to prevent autism, but certain factors may reduce risks, such as maintaining good prenatal health and avoiding exposure to environmental toxins during pregnancy.</p>
+            let resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = resultMessage;
+            resultDiv.style.display = "block";
+        }
+    </script>
 
-<h2 style="color: red;">Is autism hereditary?</h2>
-<p style="color: black;">Autism has a strong genetic component. Studies suggest that if one sibling has autism, there is a higher chance that another sibling may also be autistic.</p>
-
-<h2 style="color: red;">Are autistic individuals aggressive?</h2>
-<p style="color: black;">Not all autistic individuals are aggressive. However, some may display aggressive behaviors when overwhelmed, frustrated, or unable to communicate their needs effectively.</p>
-
-<h2 style="color: red;">What is the difference between autism and ADHD?</h2>
-<p style="color: black;">Autism and ADHD (Attention Deficit Hyperactivity Disorder) share some overlapping symptoms, such as difficulty with focus and social interactions. However, ADHD involves hyperactivity, impulsivity, and difficulty maintaining attention.</p>
-
-<h2 style="color: red;">How can I support someone with autism?</h2>
-<p style="color: black;">Be patient and understanding. Learn about their specific needs and communication style. Respect their sensory sensitivities and provide clear and structured communication.</p>
-
-<h2 style="color: red;">Can autistic individuals work?</h2>
-<p style="color: black;">Yes, many autistic individuals can work successfully in various fields, especially in structured environments that suit their skills and interests.</p>
-
-            <ul>
-                <li>Difficulty with eye contact and social interactions.</li>
-                <li>Delayed speech or difficulty understanding non-verbal cues.</li>
-                <li>Repetitive behaviors such as hand-flapping, rocking, or lining up objects.</li>
-                <li>Unusual sensitivity to sounds, lights, or textures.</li>
-                <li>Strong focus on specific interests or routines.</li>
-            </ul>
-        </div>
-        <div style="margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #ddd;">
-            <h2 style="color: #00008B; font-style: italic;">Does autism affect intelligence?</h2>
-            <p>Intelligence levels vary widely among autistic individuals. Some have average or above-average intelligence (even exceptional skills in certain areas), while others may have intellectual disabilities. About 40% of autistic individuals have an intellectual disability, but many do not.</p>
-        </div>
-        <div style="margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #ddd;">
-            <h2 style="color: #00008B; font-style: italic;">Can people with autism live independently?</h2>
-            <p>Yes, many autistic individuals can live independently, especially with the right support and life skills training. Some may require assistance in certain areas, while others can live and work independently without additional support.</p>
-        </div>
-        <div style="margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #ddd;">
-            <h2 style="color: #00008B; font-style: italic;">Do vaccines cause autism?</h2>
-            <p>No, vaccines do not cause autism. This myth originated from a discredited study in 1998 that has since been debunked. Extensive research involving millions of children has shown no link between vaccines and autism.</p>
-        </div>
-        <div style="margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #ddd;">
-            <h2 style="color: #00008B; font-style: italic;">How can I support someone with autism?</h2>
-            <p>To support an autistic individual:</p>
-            <ul>
-                <li>Be patient and understanding.</li>
-                <li>Learn about their specific needs and communication style.</li>
-                <li>Respect their sensory sensitivities (avoid loud noises, bright lights, etc.).</li>
-                <li>Encourage and support their interests and strengths.</li>
-                <li>Provide clear and structured communication.</li>
-            </ul>
-        </div>
-        <div style="margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #ddd;">
-            <h2 style="color: #00008B; font-style: italic;">Can autistic individuals work?</h2>
-            <p>Yes, many autistic individuals can work successfully in various fields, especially in structured environments that suit their skills and interests. Some excel in areas like computer programming, engineering, art, or writing. Workplace accommodations, such as clear instructions and quiet spaces, can help them thrive.</p>
-        </div>
-    </section>
 </body>
 </html>
 
-<h1 style="color: blue; font-size: 30px;">Top Most Common Questions About Autism</h1>
-
-<h2 style="color: red;">What is autism?</h2>
-<p style="color: black;">Autism, or Autism Spectrum Disorder (ASD), is a neurodevelopmental condition that affects a person's ability to communicate, interact socially, and behave in typical ways.</p>
-
-<h2 style="color: red;">What causes autism?</h2>
-<p style="color: black;">The exact cause of autism is unknown. However, research suggests it results from a combination of genetic and environmental factors.</p>
-
-<h2 style="color: red;">Is autism a mental illness?</h2>
-<p style="color: black;">No, autism is not a mental illness. It is a neurological condition that affects brain development and processing.</p>
-
-<h2 style="color: red;">Is there a cure for autism?</h2>
-<p style="color: black;">There is no cure for autism, but various therapies and interventions can help individuals develop skills and improve their quality of life.</p>
-
-<h2 style="color: red;">How is autism diagnosed?</h2>
-<p style="color: black;">Autism is diagnosed through behavioral observations and developmental assessments.</p>
-
-<h2 style="color: red;">What are the common symptoms of autism in children?</h2>
-<p style="color: black;">Symptoms vary, but common signs include: Difficulty with eye contact and social interactions. Delayed speech or difficulty understanding non-verbal cues.</p>
-
-<h2 style="color: red;">Does autism affect intelligence?</h2>
-<p style="color: black;">Intelligence levels vary widely among autistic individuals. Some have average or above-average intelligence, while others may have intellectual disabilities.</p>
-
-<h2 style="color: red;">Can people with autism live independently?</h2>
-<p style="color: black;">Yes, many autistic individuals can live independently, especially with the right support and life skills training.</p>
-
-<h2 style="color: red;">Do vaccines cause autism?</h2>
-<p style="color: black;">No, vaccines do not cause autism. This myth originated from a discredited study in 1998 that has since been debunked.</p>
-
-<h2 style="color: red;">What is the difference between autism and Asperger’s syndrome?</h2>
-<p style="color: black;">Asperger’s syndrome, previously considered a separate diagnosis, is now classified under the autism spectrum.</p>
-
-<h2 style="color: red;">How does autism affect language and communication?</h2>
-<p style="color: black;">Some autistic individuals are non-verbal or have delayed speech development. Others may speak fluently but struggle with understanding sarcasm, jokes, or non-verbal cues.</p>
-
-<h2 style="color: red;">How important is early intervention for autism?</h2>
-<p style="color: black;">Early intervention significantly improves outcomes for autistic children. Therapies targeting speech, social skills, and behavior help them develop essential skills at a young age.</p>
-
-<h2 style="color: red;">Can autism be prevented?</h2>
-<p style="color: black;">There is no known way to prevent autism, but certain factors may reduce risks, such as maintaining good prenatal health and avoiding exposure to environmental toxins during pregnancy.</p>
-
-<h2 style="color: red;">Is autism hereditary?</h2>
-<p style="color: black;">Autism has a strong genetic component. Studies suggest that if one sibling has autism, there is a higher chance that another sibling may also be autistic.</p>
-
-<h2 style="color: red;">Are autistic individuals aggressive?</h2>
-<p style="color: black;">Not all autistic individuals are aggressive. However, some may display aggressive behaviors when overwhelmed, frustrated, or unable to communicate their needs effectively.</p>
-
-<h2 style="color: red;">What is the difference between autism and ADHD?</h2>
-<p style="color: black;">Autism and ADHD (Attention Deficit Hyperactivity Disorder) share some overlapping symptoms, such as difficulty with focus and social interactions. However, ADHD involves hyperactivity, impulsivity, and difficulty maintaining attention.</p>
-
-<h2 style="color: red;">How can I support someone with autism?</h2>
-<p style="color: black;">Be patient and understanding. Learn about their specific needs and communication style. Respect their sensory sensitivities and provide clear and structured communication.</p>
-
-<h2 style="color: red;">Can autistic individuals work?</h2>
-<p style="color: black;">Yes, many autistic individuals can work successfully in various fields, especially in structured environments that suit their skills and interests.</p>
