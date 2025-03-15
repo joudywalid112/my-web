@@ -1,24 +1,55 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: white;
-}
-.container {
-    width: 50%;
-    margin: auto;
-    padding: 20px;
-    background: black;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    margin-top: 50px;
-}
-button {
-    background: #007bff;
-    color: pink;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-button:hover {
-    background: #0056b3;
-}
+<h1 style="color: blue; font-size: 30px;">Top Most Common Questions About Autism</h1>
+
+<h2 style="color: red;">What is autism?</h2>
+<p style="color: black;">Autism, or Autism Spectrum Disorder (ASD), is a neurodevelopmental condition that affects a person's ability to communicate, interact socially, and behave in typical ways.</p>
+
+<h2 style="color: red;">What causes autism?</h2>
+<p style="color: black;">The exact cause of autism is unknown. However, research suggests it results from a combination of genetic and environmental factors.</p>
+
+<h2 style="color: red;">Is autism a mental illness?</h2>
+<p style="color: black;">No, autism is not a mental illness. It is a neurological condition that affects brain development and processing.</p>
+
+<h2 style="color: red;">Is there a cure for autism?</h2>
+<p style="color: black;">There is no cure for autism, but various therapies and interventions can help individuals develop skills and improve their quality of life.</p>
+
+<h2 style="color: red;">How is autism diagnosed?</h2>
+<p style="color: black;">Autism is diagnosed through behavioral observations and developmental assessments.</p>
+
+<h2 style="color: red;">What are the common symptoms of autism in children?</h2>
+<p style="color: black;">Symptoms vary, but common signs include: Difficulty with eye contact and social interactions. Delayed speech or difficulty understanding non-verbal cues.</p>
+
+<h2 style="color: red;">Does autism affect intelligence?</h2>
+<p style="color: black;">Intelligence levels vary widely among autistic individuals. Some have average or above-average intelligence, while others may have intellectual disabilities.</p>
+
+<h2 style="color: red;">Can people with autism live independently?</h2>
+<p style="color: black;">Yes, many autistic individuals can live independently, especially with the right support and life skills training.</p>
+
+<h2 style="color: red;">Do vaccines cause autism?</h2>
+<p style="color: black;">No, vaccines do not cause autism. This myth originated from a discredited study in 1998 that has since been debunked.</p>
+
+<h2 style="color: red;">What is the difference between autism and Asperger’s syndrome?</h2>
+<p style="color: black;">Asperger’s syndrome, previously considered a separate diagnosis, is now classified under the autism spectrum.</p>
+
+<h2 style="color: red;">How does autism affect language and communication?</h2>
+<p style="color: black;">Some autistic individuals are non-verbal or have delayed speech development. Others may speak fluently but struggle with understanding sarcasm, jokes, or non-verbal cues.</p>
+
+<h2 style="color: red;">How important is early intervention for autism?</h2>
+<p style="color: black;">Early intervention significantly improves outcomes for autistic children. Therapies targeting speech, social skills, and behavior help them develop essential skills at a young age.</p>
+
+<h2 style="color: red;">Can autism be prevented?</h2>
+<p style="color: black;">There is no known way to prevent autism, but certain factors may reduce risks, such as maintaining good prenatal health and avoiding exposure to environmental toxins during pregnancy.</p>
+
+<h2 style="color: red;">Is autism hereditary?</h2>
+<p style="color: black;">Autism has a strong genetic component. Studies suggest that if one sibling has autism, there is a higher chance that another sibling may also be autistic.</p>
+
+<h2 style="color: red;">Are autistic individuals aggressive?</h2>
+<p style="color: black;">Not all autistic individuals are aggressive. However, some may display aggressive behaviors when overwhelmed, frustrated, or unable to communicate their needs effectively.</p>
+
+<h2 style="color: red;">What is the difference between autism and ADHD?</h2>
+<p style="color: black;">Autism and ADHD (Attention Deficit Hyperactivity Disorder) share some overlapping symptoms, such as difficulty with focus and social interactions. However, ADHD involves hyperactivity, impulsivity, and difficulty maintaining attention.</p>
+
+<h2 style="color: red;">How can I support someone with autism?</h2>
+<p style="color: black;">Be patient and understanding. Learn about their specific needs and communication style. Respect their sensory sensitivities and provide clear and structured communication.</p>
+
+<h2 style="color: red;">Can autistic individuals work?</h2>
+<p style="color: black;">Yes, many autistic individuals can work successfully in various fields, especially in structured environments that suit their skills and interests.</p>
